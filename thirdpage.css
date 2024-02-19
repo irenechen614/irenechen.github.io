@@ -1,0 +1,166 @@
+html,body {
+    height: 100%;
+    width: 100%;
+    overflow: hidden;
+    padding: 0;
+    margin: 0;
+    background-color: #7b9ea9; /* Light blue background */
+    background-image: 
+      radial-gradient(circle, rgba(255, 255, 240, 0.521) 5%, transparent 10%),
+      radial-gradient(circle, rgba(255, 255, 240, 0.66) 5%, transparent 10%),
+      radial-gradient(circle, rgba(255, 255, 240, 0.82) 10%, transparent 10%),
+      radial-gradient(circle, rgba(255, 255, 240, 0.425) 10%, transparent 10%),
+      radial-gradient(circle, rgba(255, 255, 240, 0.501) 20%, transparent 20%);
+    background-size: 100px 100px;
+    background-position: 0 0, 50px 0, 25px 50px, 75px 50px, 50px 25px;
+  }
+
+  
+  .cat {
+    position: absolute;
+    background-color: black;
+    height: 60px;
+    top: 60%;
+    left: 50%;
+    bottom: 200px;
+    width: 50px;
+    z-index: 0;
+  }
+
+  .eyeleft, .eyeright, .nose, .earleft, .earright {
+    position: absolute; /* Added for these elements */
+}
+  .eyeleft{
+    position: absolute;
+    height: 8px; 
+    width: 8px;
+    background: white;
+    border-radius: 100%;
+    top: 15px;
+    left: 10px;
+  }
+  .eyeright{
+    position: absolute;
+    height: 8px; 
+    width: 8px;
+    background: white;
+    border-radius: 100%;
+    top: 15px;
+    left: 35px;
+  }
+  .nose{
+    position: absolute;
+    height:4px;
+    width:6px;
+    background: white;
+    border-radius: 100%;
+    top: 23px;
+    left: 23px;
+}
+.earleft{
+    clip-path: polygon(0 0, 0 100%, 100% 100%);
+    background-color: black;
+    width: 100%;
+    height: 100%;
+    width: 15px;
+    height: 10px;
+    top: -9px;
+}
+.earright{
+    clip-path: polygon(0 0, 0 100%, 100% 100%);
+    background-color: black;
+    width: 100%;
+    height: 100%;
+    width: 15px;
+    height: 10px;
+    top: -10px;
+    left: 35px;
+    -webkit-transform: scaleX(-1);
+    transform: scaleX(-1);
+}
+
+  .cat > .tail {
+    position: absolute;
+    height: 20%;
+    width: 60%;
+    background-color: black;
+    bottom: 0;
+    right: 35%;
+    border-radius: 50%/250%;
+    background-color: black;
+  }
+  
+  .cat > .tail > .tail {
+    position: absolute;
+    right: 90%;
+  }
+  
+  .tail > .tail {
+    position: absolute;
+    height: 100%;
+    transform-origin: center right;
+    transform: rotate(0deg);
+    width: 25px;
+    right: 26%;
+    animation: tail 2s none infinite;
+    border-top-left-radius: 50% 50%;
+    border-bottom-left-radius: 50% 50%;
+    background-color: inherit;
+  }
+  
+  @keyframes tail {
+    5% {
+      transform: rotate(0);
+    }
+    50% {
+      transform: rotate(7deg);
+    }
+    70%,
+    100% {
+      transform: rotate(0);
+    }
+  }
+  .p1{
+    position: absolute;
+    left: 15%;
+    top: 10%;
+    font-family: "Pixelify Sans", sans-serif;
+    font-size: 50px;
+  }
+ .p2{
+    position: absolute;
+    left: 75%;
+    top: 20%;
+    font-family: "Pixelify Sans", sans-serif;
+    font-size: 50px;
+  }
+  .feed-container {
+    position: absolute;
+    top: 25%;
+    left: 13%;
+    display: flex;
+    justify-content: center; 
+    align-items: center;
+    visibility: hidden;
+  }
+ .fish{
+    text-align: center;
+    border: 3px dashed;
+    margin: 10px;
+    padding: 10px;
+ }
+ .chocolate{
+    text-align: center;
+    border: 3px dashed;
+    margin: 10px;
+    padding: 10px;
+ }
+ .Happy {
+    position: absolute;
+    display: none;
+  }
+.angry {
+    position: absolute;
+    display: none;
+  }
+ 
