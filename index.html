@@ -1,1 +1,65 @@
-Hello, world! This file is reserved for the index page of what will eventually become my class portfolio!
+<head>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Pixelify+Sans:wght@400..700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            cursor: url("https://img.icons8.com/material-rounded/20/cat-footprint.png"), auto;
+            font-family: "Pixelify";
+        }
+    </style>
+
+</head>
+<body>
+    <div class="cat center">
+        <div class="body"></div>
+        <div class="head">
+          <div class="eyes">
+            <div class="eyeleft"></div>
+            <div class="eyeright"></div>
+            <div class="nose"></div>
+            <div class="earleft"></div>
+            <div class="earright"></div>
+          </div>        
+        </div>
+        <div class="tail">
+          <div class="tail">
+            <div class="tail">
+              <div class="tail">
+                <div class="tail">
+                  <div class="tail"></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <input type="text" id="textinput">
+      <label for="text" id="name">Give Me A Name!</label>
+      <title>Change Content on Click</title>
+
+      <h1 id="next">--></h1>
+      <div id="animation" class="hearts">
+        <div class="heart"></div>
+        <div class="heart"></div>
+        <div class="heart"></div>
+      </div>
+      <a id="thirdpage" href="thirdpage.html">--></a>
+      <script tyoe="text/javascript">
+        function changeContent() 
+        {
+        document.getElementById("animation").style.visibility = "visible";
+        document.getElementById("name").innerHTML = "I Love This Name!";
+        document.getElementById("textinput").style.display = "none";
+        document.getElementById("next").style.display = "none";
+        document.getElementById("thirdpage").style.visibility = "visible";
+        }
+        document.getElementById("next").addEventListener("click", changeContent);
+      </script>
+ </body>     
+        
+
+    
+
+
