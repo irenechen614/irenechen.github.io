@@ -1,0 +1,114 @@
+<head>
+    <link rel="stylesheet" href="thirdpage.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Pixelify+Sans:wght@400..700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            cursor: url("https://img.icons8.com/material-rounded/20/cat-footprint.png"), auto;
+            font-family: "Pixelify";
+        }
+        .custom-cursor-fish {
+            cursor: url('https://img.icons8.com/dusk/30/killed-fish.png'), auto;
+        }
+        .custom-cursor-chocolate{
+            cursor: url('https://img.icons8.com/office/40/chocolate-bar.png'), auto;
+        }
+        
+    </style>
+</head>
+<body>
+    <div class="cat">
+        <div class="body"></div>
+        <div class="head">
+          <div class="eyes">
+            <div class="eyeleft"></div>
+            <div class="eyeright"></div>
+            <div class="nose"></div>
+            <div class="earleft"></div>
+            <div class="earright"></div>
+          </div>        
+        </div>
+        <div class="tail">
+          <div class="tail">
+            <div class="tail">
+              <div class="tail">
+                <div class="tail">
+                  <div class="tail"></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+     </div>
+     <p class="p1">Feed</p>
+     <p class="p2">Pet</p>
+    
+     <div id ="feed-container" class="feed-container">
+        <div class="fish">
+            <img src="https://img.icons8.com/dusk/64/killed-fish.png" alt="">
+         </div>
+         <div class="chocolate">
+            <img height="64" src="https://img.icons8.com/office/40/chocolate-bar.png" alt="">
+         </div>
+      </div>
+      <script type="text/javascript">
+        function display() 
+        {
+        document.getElementById("feed-container").style.visibility = "visible";
+        }
+        document.querySelector(".p1").addEventListener("click", display);
+      </script>
+    
+      <div class="Happy"id="Happy">
+        <img src="https://img.icons8.com/pulsar-color/48/happy.png" alt="">
+      </div>
+      <div class="angry"id="angry">
+        <img src="https://img.icons8.com/pulsar-color/48/angry.png" alt="">
+      </div>
+      <script>
+        document.addEventListener('DOMContentLoaded', function () {
+    var fishElements = document.querySelectorAll('.fish');
+    var chocolateElements = document.querySelectorAll('.chocolate');
+    var catElement = document.querySelector('.cat');
+    var imageElement = document.createElement('img'); // Placeholder for dynamically changing images (angry or happy)
+    document.body.appendChild(imageElement);
+    imageElement.style.position = 'absolute';
+    imageElement.style.display = 'none'; // Initially hide the image
+
+    // Function to remove all custom cursors
+    function removeAllCustomCursors() {
+        document.body.classList.remove('custom-cursor-fish', 'custom-cursor-chocolate');
+    }
+
+    fishElements.forEach(function(element) {
+        element.addEventListener('click', function() {
+            removeAllCustomCursors();
+            document.body.classList.add('custom-cursor-fish');
+            imageElement.src = 'https://img.icons8.com/pulsar-color/48/happy.png';
+        });
+    });
+
+    chocolateElements.forEach(function(element) {
+        element.addEventListener('click', function() {
+            removeAllCustomCursors();
+            document.body.classList.add('custom-cursor-chocolate');
+            imageElement.src = 'https://img.icons8.com/pulsar-color/48/angry.png'; // Set source for angry image
+        });
+    });
+
+    catElement.addEventListener('mousedown', function(event) {
+        if (document.body.classList.contains('custom-cursor-fish') || document.body.classList.contains('custom-cursor-chocolate')) {
+            var catRect = catElement.getBoundingClientRect();
+            imageElement.style.left = (catRect.right + 10) + 'px';
+            imageElement.style.top = (catRect.top - 20) + 'px';
+            imageElement.style.display = 'block';
+        }
+    });
+
+    document.addEventListener('mouseup', function() {
+        imageElement.style.display = 'none';
+    });
+});
+      </script>
+    
+</body>
