@@ -4,13 +4,7 @@ html,body {
     overflow: hidden;
     padding: 0;
     margin: 0;
-    background-color: #7b9ea9; /* Light blue background */
-    background-image: 
-      radial-gradient(circle, rgba(255, 255, 240, 0.521) 5%, transparent 10%),
-      radial-gradient(circle, rgba(255, 255, 240, 0.66) 5%, transparent 10%),
-      radial-gradient(circle, rgba(255, 255, 240, 0.82) 10%, transparent 10%),
-      radial-gradient(circle, rgba(255, 255, 240, 0.425) 10%, transparent 10%),
-      radial-gradient(circle, rgba(255, 255, 240, 0.501) 20%, transparent 20%);
+    background-color: #c2dfe8; 
     background-size: 100px 100px;
     background-position: 0 0, 50px 0, 25px 50px, 75px 50px, 50px 25px;
   }
@@ -125,9 +119,9 @@ html,body {
     background-color: transparent;
     border: none; 
     border-bottom: 3px solid black; 
-    width: 250px; 
+    width:18%; 
     position: absolute;
-    top: 250px;
+    top: 35%;
     left: 42%;
     font-family: "Pixelify Sans", sans-serif;
     font-size: 30px;
@@ -143,9 +137,9 @@ label{
     font-family: "Pixelify Sans", sans-serif;
     font-size: 30px;
 }
-h1{
+#next{
     position: absolute;
-    top: 25%;
+    top: 30%;
     left: 60%;
     font-family: "Pixelify Sans", sans-serif;
 }
@@ -223,4 +217,9 @@ h1{
     font-family: "Pixelify Sans", sans-serif;
     color: black;
     font-size: 30px;
+}
+.cake{
+  position:absolute;
+  top: 90%;
+  left: 2%;
 }
