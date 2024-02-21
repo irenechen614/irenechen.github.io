@@ -4,13 +4,7 @@ html,body {
     overflow: hidden;
     padding: 0;
     margin: 0;
-    background-color: #7b9ea9; /* Light blue background */
-    background-image: 
-      radial-gradient(circle, rgba(255, 255, 240, 0.521) 5%, transparent 10%),
-      radial-gradient(circle, rgba(255, 255, 240, 0.66) 5%, transparent 10%),
-      radial-gradient(circle, rgba(255, 255, 240, 0.82) 10%, transparent 10%),
-      radial-gradient(circle, rgba(255, 255, 240, 0.425) 10%, transparent 10%),
-      radial-gradient(circle, rgba(255, 255, 240, 0.501) 20%, transparent 20%);
+    background-color: #c2dfe8; 
     background-size: 100px 100px;
     background-position: 0 0, 50px 0, 25px 50px, 75px 50px, 50px 25px;
   }
@@ -163,4 +157,3 @@ html,body {
     position: absolute;
     display: none;
   }
- 
